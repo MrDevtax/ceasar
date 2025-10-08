@@ -1,8 +1,0 @@
-Question 1
-letters =
-Based on the story of Julius Caesar's secret party and the Caesar Cipher, identify potential variables you would need. Please ensure you use appropriate variable naming conventions in JavaScript.
-partyLocation = 
-encryptedMessage = 
-shiftValue = 
-decryptedMessage = 
-isPartySafe = 
