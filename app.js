@@ -59,3 +59,49 @@ const shiftValue = randomInt + 3;
 
 //Question 4 Since randomInt is a number between 0 and range - 1 , adding 3 shifts this range upward, resulting in numbers between 3 and 33.
 
+const emblemClue1 = "Eagle";
+const emblemClue2 = "Laurel";
+const emblemClue3 = 7;
+
+let locationStart = "";
+
+if (emblemClue1 === "Eagle")
+{
+  locationStart = "Forum";
+}
+else if (emblemClue1 === "Lion")
+{
+  locationStart = "Colosseum";
+}
+else
+{
+  locationStart = "Villa";
+}
+
+if (emblemClue2 === "Laurel" && locationStart === "Forum")
+{
+  locationStart += " of Augustus";
+}
+else if (emblemClue2 === "Grapes" || locationStart === "Villa")
+{
+  locationStart += " of Pompey";
+}
+
+
+switch (emblemClue3)
+{
+  case 7:
+    locationStart += " North";
+    break;
+  case 3:
+    locationStart += " South";
+    break;
+  case 9:
+    locationStart += " East";
+    break;
+  case 4:
+    locationStart += " West";
+    break;
+}
+
+//Using == (double equals) performs type coercion, meaning it tries to convert the operands to the same type before making the comparison. On the other hand, === (triple equals) checks both the value and the type, ensuring a stricter equality check.
