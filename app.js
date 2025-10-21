@@ -126,3 +126,37 @@ const honoredGuests = guests.slice(0, 1);
 const otherGuests = guests.slice(1);
 otherGuests.sort();
 const sortedGuests = honoredGuests.concat(otherGuests);
+
+
+const guests = {
+  ANTONY: {
+    title: "General",
+    region: "Rome",
+    dietaryPreference: "Vegetarian",
+    pastGifts: ["Golden Laurel", "Chariot"]
+  },
+  CICERO: {
+    title: "Orator",
+    region: "Arpinum",
+    dietaryPreference: "Omnivore",
+    pastGifts: ["Scroll of Proverbs", "Quill"]
+  }
+};
+
+guests.BRUTUS = {
+  title: "Senator",
+  region: "Rome",
+   dietaryPreference: "Vegan",
+  pastGifts: ["Silver Dagger", "Marble Bust"]
+};
+
+guests.CICERO.pastGifts.push("Golden Lyre");
+
+const.anonyRegion = guests.ANTONY.region;
+
+delete guests.CICERO;
+
+const generalProfile = guests.ANTONY;
+generalProfile.region = "Egypt";
+
+//"Egypt" because objects in JavaScript are reference types. When we assign the object to a new variable, we're not creating a new copy of the object both variables point to the same object in memory. Changes made through one variable are reflected in the other
